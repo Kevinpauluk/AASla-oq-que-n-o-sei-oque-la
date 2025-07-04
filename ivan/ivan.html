@@ -8,6 +8,7 @@
     </style>
 </head>
 <body>
+    <link rel="stylesheet" href="anime-style.css">
     <div class="grid" id="anime-grid"></div>
 
     <script>
@@ -19,6 +20,12 @@
         animes.forEach(anime => {
             grid.innerHTML += `<div class="card"><h3>${anime.titulo}</h3><p>${anime.eps} episódios</p></div>`;
         });
+        <section class="anime-section">
+    <h2>🔥 Animes em Destaque</h2>
+    <div class="grid" id="anime-grid">
+        <!-- Cards gerados pelo JavaScript -->
+    </div>
+</section>
     </script>
 </body>
 </html>

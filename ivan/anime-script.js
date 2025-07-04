@@ -2,7 +2,7 @@
 const dados = {
     animes: [
         { titulo: "Attack on Titan", imagem: "aot.jpg", eps: 88 },
-        { titulo: "Vanitas no Carte", imagem: "vanitas.jpg", eps: 24 }
+        { titulo: "Vanitas no Carte", imagem: "Vanitas.jpg", eps: 24 }
     ],
     mangas: [
         { titulo: "Berserk", imagem: "berserk.jpg", capitulos: 400 }
@@ -88,3 +88,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // Certifique-se de que cada array tem itens únicos
 console.log(dados.animes); // Deve mostrar sem repetições
+const animes = [
+    { 
+        titulo: "Attack on Titan", 
+        eps: 88, 
+        imagem: "attack-on-titan.jpg" 
+    },
+    { 
+        titulo: "Vanitas no Carte", 
+        eps: 24, 
+        imagem: "vanitas.jpg" 
+    }
+];
+
+const grid = document.getElementById("anime-grid");
+animes.forEach(anime => {
+    grid.innerHTML += `
+        <div class="card">
+            <img src="${anime.imagem}" alt="${anime.titulo}">
+            <h3>${anime.titulo}</h3>
+            <p>${anime.eps} episódios</p>
+        </div>
+    `;
+});
