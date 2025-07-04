@@ -1,8 +1,8 @@
 // Dados de exemplo (substitua por API futuramente)
 const dados = {
     animes: [
-        { titulo: "One Piece", imagem: "one-piece.jpg", eps: 1100 },
-        { titulo: "Attack on Titan", imagem: "aot.jpg", eps: 88 }
+        { titulo: "Seraph of the End", imagem: "yui.jfif", eps: 1100 },
+        { titulo: "Vanitas no Carte", imagem: "Vanitas.jpg", eps: 88 }
     ],
     mangas: [
         { titulo: "Berserk", imagem: "berserk.jpg", capitulos: 400 },
