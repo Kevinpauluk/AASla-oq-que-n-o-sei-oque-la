@@ -1,20 +1,11 @@
 // Dados de exemplo (substitua por API futuramente)
 const dados = {
     animes: [
-        { titulo: "Seraph of the End", imagem: "yui.jfif", eps: 1100 },
-        { titulo: "Vanitas no Carte", imagem: "Vanitas.jpg", eps: 88 }
+        { titulo: "Attack on Titan", imagem: "aot.jpg", eps: 88 },
+        { titulo: "Vanitas no Carte", imagem: "vanitas.jpg", eps: 24 }
     ],
     mangas: [
-        { titulo: "Berserk", imagem: "berserk.jpg", capitulos: 400 },
-        { titulo: "Chainsaw Man", imagem: "chainsaw.jpg", capitulos: 150 }
-    ],
-    manhwas: [
-        { titulo: "Solo Leveling", imagem: "solo-leveling.jpg", capitulos: 200 },
-        { titulo: "Tower of God", imagem: "tower-of-god.jpg", capitulos: 550 }
-    ],
-    novels: [
-        { titulo: "Mushoku Tensei", volume: 26 },
-        { titulo: "Overlord", volume: 16 }
+        { titulo: "Berserk", imagem: "berserk.jpg", capitulos: 400 }
     ]
 };
 
