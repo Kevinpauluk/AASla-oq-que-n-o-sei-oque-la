@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Geek 🎮</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>GeekVerse | Animes, Mangás & Manhwas</title>
+    <link rel="stylesheet" href="anime-styles.css">
 </head>
 <body>
     <header>
-        <h1>Bem-vindo ao Mundo Geek!</h1>
+        <h1>🎌 Animes • Mangás • Manhwas • Novels</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Notícias</a></li>
-                <li><a href="#">Jogos</a></li>
-                <li><a href="#">Séries</a></li>
+                <li><a href="#destaques">Destaques</a></li>
+                <li><a href="#mangas">Mangás</a></li>
+                <li><a href="#manhwas">Manhwas</a></li>
+                <li><a href="#novels">Novels</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="destaque">
-            <h2>Destaques da Semana</h2>
-            <div class="card" id="destaque-1">
-                <h3>Novo jogo lançado!</h3>
-                <p>Confira as análises...</p>
-            </div>
+        <!-- Seção de Destaques (Animes) -->
+        <section id="destaques" class="anime-section">
+            <h2>🔥 Animes em Destaque</h2>
+            <div class="grid" id="anime-grid"></div>
+        </section>
+
+        <!-- Seção de Mangás -->
+        <section id="mangas" class="manga-section">
+            <h2>📘 Mangás Populares</h2>
+            <div class="grid" id="manga-grid"></div>
+        </section>
+
+        <!-- Seção de Manhwas -->
+        <section id="manhwas" class="manhwa-section">
+            <h2>📙 Manhwas Recomendados</h2>
+            <div class="grid" id="manhwa-grid"></div>
+        </section>
+
+        <!-- Seção de Novels -->
+        <section id="novels" class="novel-section">
+            <h2>📖 Light Novels</h2>
+            <div class="novel-list" id="novel-list"></div>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Site Geek | Feito com ❤️ por [Ivan, Kevin e Thalison]</p>
+        <p>© 2024 GeekVerse | Seção Animes/Mangás por <strong>[Seu Nome]</strong></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="anime-script.js"></script>
 </body>
 </html>
