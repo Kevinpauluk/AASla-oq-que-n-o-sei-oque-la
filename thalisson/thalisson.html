@@ -1,90 +1,49 @@
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geek Music Zone</title>
-    <link rel="stylesheet" href="style.css">
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Geek - Música Eletrônica</title>
     <style>
         body {
-            background-color: #121212;
-            color: #f0f0f0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: #0f0f1a;
+            color: #00ffcc;
+            font-family: 'Courier New', monospace;
         }
-
-        header {
-            background-color: #1f1f1f;
+        .player {
+            background: #1a1a2e;
             padding: 20px;
+            border-radius: 10px;
             text-align: center;
         }
-
-        header h1 {
-            color: #00ffe1;
-            margin: 0;
-        }
-
-        nav {
-            background-color: #292929;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: #00ffe1;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            padding: 30px;
-        }
-
-        h2 {
-            color: #ff66cc;
-        }
-
-        .track {
-            margin-bottom: 20px;
-        }
-
-        iframe {
-            display: block;
-            margin: 10px 0;
+        button {
+            background: #00ffcc;
+            color: #0f0f1a;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Geek Music Zone</h1>
-        <p>Sons eletrônicos, vibes futuristas e muito mais para os apaixonados por música geek.</p>
-    </header>
+    <h1>🎵 Geek Beats - Música Eletrônica 🎮</h1>
+    
+    <div class="player">
+        <h2>🎧 Player Cyberpunk</h2>
+        <audio id="audioPlayer" controls>
+            <source src="sua_musica.mp3" type="audio/mp3">
+            Seu navegador não suporta o player.
+        </audio>
+        <br>
+        <button onclick="document.getElementById('audioPlayer').play()">▶️ Play</button>
+        <button onclick="document.getElementById('audioPlayer').pause()">⏸️ Pause</button>
+    </div>
 
-    <nav>
-        <a href="#eletronicas">Músicas Eletrônicas</a>
-        <a href="#openings">Openings de Animes</a>
-        <a href="#soundtracks">Trilhas Sonoras</a>
-    </nav>
-
-    <main>
-        <section id="eletronicas">
-            <h2>Músicas Eletrônicas</h2>
-            <div class="track">
-                <h3>Alan Walker - Spectre</h3>
-                <iframe width="300" height="170" src="https://www.youtube.com/embed/AOeY-nDp7hI" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="track">
-                <h3>Virtual Riot - Energy Drink</h3>
-                <iframe width="300" height="170" src="https://www.youtube.com/embed/X6OQ3xkGO7I" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="track">
-                <h3>Tokyo Machine - BUBBLES</h3>
-                <iframe width="300" height="170" src="https://www.youtube.com/embed/MEjc3ZvuYdA" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-    </main>
+    <script>
+        // Aqui você pode adicionar mais funções JS!
+        console.log("Site geek no ar! 🚀");
+    </script>
 </body>
 </html>
