@@ -60,3 +60,38 @@ function filtrarMangas(genero) {
     const mangasFiltrados = dados.mangas.filter(manga => manga.genero === genero);
     // Atualiza a grid...
 }
+// Carrossel
+function initCarrossel() {
+    const carrossel = document.querySelector(".carrossel");
+    const items = document.querySelectorAll(".carrossel-item");
+    const btnPrev = document.querySelector(".carrossel-btn.prev");
+    const btnNext = document.querySelector(".carrossel-btn.next");
+    let currentIndex = 0;
+    const totalItems = items.length;
+
+    function updateCarrossel() {
+        carrossel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    btnNext.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarrossel();
+    });
+
+    btnPrev.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateCarrossel();
+    });
+
+    // Auto-avanço (opcional)
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateCarrossel();
+    }, 5000);
+}
+
+// Inicializa tudo quando o DOM carregar
+document.addEventListener("DOMContentLoaded", () => {
+    carregarDados(); // Função anterior
+    initCarrossel();
+});
