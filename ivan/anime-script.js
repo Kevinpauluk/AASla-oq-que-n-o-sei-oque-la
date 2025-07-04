@@ -86,3 +86,5 @@ document.addEventListener("DOMContentLoaded", () => {
     carregarDados(); // Função anterior
     initCarrossel();
 });
+// Certifique-se de que cada array tem itens únicos
+console.log(dados.animes); // Deve mostrar sem repetições
