@@ -54,3 +54,9 @@ function carregarDados() {
 }
 
 document.addEventListener("DOMContentLoaded", carregarDados);
+
+// Exemplo: Filtrar mangás por gênero
+function filtrarMangas(genero) {
+    const mangasFiltrados = dados.mangas.filter(manga => manga.genero === genero);
+    // Atualiza a grid...
+}
