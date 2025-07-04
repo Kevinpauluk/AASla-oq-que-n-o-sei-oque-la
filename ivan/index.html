@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste</title>
+    <style>
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        .card { background: #2a2a40; padding: 1rem; color: white; }
+    </style>
+</head>
+<body>
+    <div class="grid" id="anime-grid"></div>
+
+    <script>
+        const animes = [
+            { titulo: "Attack on Titan", eps: 88 },
+            { titulo: "Vanitas no Carte", eps: 24 }
+        ];
+        const grid = document.getElementById("anime-grid");
+        animes.forEach(anime => {
+            grid.innerHTML += `<div class="card"><h3>${anime.titulo}</h3><p>${anime.eps} episódios</p></div>`;
+        });
+    </script>
+</body>
+</html>
