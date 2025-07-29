@@ -1,26 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reino das Sombras</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="container">
-    <h1>🜃 Reino das Sombras</h1>
-    <nav>
-      <a href="#">Apresentação</a>
-      <a href="#">História do Mundo</a>
-      <a href="#">Classes & Fichas</a>
-    </nav>
-    <section class="intro">
-      <p>
-        Bem-vindo, viajante. Poucos ousam atravessar os portões do Reino das Sombras.  
-        Aqui, colossos adormecem sob montanhas e lendas sussurram nos ventos...
-      </p>
-    </section>
-  </div>
-</body>
-</html>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#0b0b0c, #1a1a1d);
+  color: #ccc;
+  font-family: 'UnifrakturCook', cursive;
+  background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+  background-repeat: repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+h1 {
+  color: #9f6;
+  font-size: 3.2em;
+  text-shadow: 2px 2px 8px #000;
+  margin-bottom: 20px;
+}
+
+nav {
+  margin-bottom: 40px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #9f6;
+}
+
+.intro {
+  background-color: rgba(20, 20, 20, 0.6);
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px #000;
+  font-size: 1.1em;
+}
+
