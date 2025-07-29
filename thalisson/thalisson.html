@@ -1,49 +1,26 @@
  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Geek - Música Eletrônica</title>
-    <style>
-        body {
-            background-color: #0f0f1a;
-            color: #00ffcc;
-            font-family: 'Courier New', monospace;
-        }
-        .player {
-            background: #1a1a2e;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        button {
-            background: #00ffcc;
-            color: #0f0f1a;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reino das Sombras</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>🎵 Geek Beats - Música Eletrônica 🎮</h1>
-    
-    <div class="player">
-        <h2>🎧 Player Cyberpunk</h2>
-        <audio id="audioPlayer" controls>
-            <source src="sua_musica.mp3" type="audio/mp3">
-            Seu navegador não suporta o player.
-        </audio>
-        <br>
-        <button onclick="document.getElementById('audioPlayer').play()">▶️ Play</button>
-        <button onclick="document.getElementById('audioPlayer').pause()">⏸️ Pause</button>
-    </div>
-
-    <script>
-        // Aqui você pode adicionar mais funções JS!
-        console.log("Site geek no ar! 🚀");
-    </script>
+  <div class="container">
+    <h1>🜃 Reino das Sombras</h1>
+    <nav>
+      <a href="#">Apresentação</a>
+      <a href="#">História do Mundo</a>
+      <a href="#">Classes & Fichas</a>
+    </nav>
+    <section class="intro">
+      <p>
+        Bem-vindo, viajante. Poucos ousam atravessar os portões do Reino das Sombras.  
+        Aqui, colossos adormecem sob montanhas e lendas sussurram nos ventos...
+      </p>
+    </section>
+  </div>
 </body>
 </html>
