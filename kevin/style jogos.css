@@ -1,15 +1,150 @@
-       .jogo {
-            border: 1px solid #ccc;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-        }
-        .capa {
-            width: 100px;
-            margin-right: 15px;
-        }
-        .data {
-            font-weight: bold;
-            color: #007bff;
-        }
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #58a6ff;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 10px;
+}
+
+/* --- CONTROLES DO MÊS --- */
+.controles-mes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.controles-mes button {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.controles-mes button:hover:not(:disabled) {
+    background-color: #30363d;
+}
+
+.controles-mes button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.controles-mes span {
+    font-size: 1.5em;
+    font-weight: bold;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* --- FILTROS --- */
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filtros button {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    padding: 5px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+}
+
+.filtros button.active, .filtros button:hover {
+    background-color: #58a6ff;
+    color: #0d1117;
+    border-color: #58a6ff;
+}
+
+/* --- GRADE DO CALENDÁRIO --- */
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+/* --- CARTA DO JOGO --- */
+.jogo {
+    background-color: #21262d;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jogo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.jogo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 2px solid #58a6ff;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info h3 {
+    margin-top: 0;
+    color: #58a6ff;
+    font-size: 1.2em;
+}
+
+.data {
+    font-weight: bold;
+    color: #f78166;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 0.95em;
+}
+
+.plataformas {
+    color: #8b949e;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* --- ESTADOS DE CARREGAMENTO E ERRO --- */
+.loading, .erro {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+    grid-column: 1 / -1;
+}
+
+.erro {
+    color: #f85149;
+}
+
+.loading {
+    color: #58a6ff;
+}

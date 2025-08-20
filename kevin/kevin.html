@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendário de Lançamentos</title>
-    <link rel="stylesheet" href="style jogos.css">
+    <title>Calendário de Lançamentos - Keyin Games</title>
+    <link rel="stylesheet" href="jogos.css">
 </head>
 <body>
-    <h1>Calendário de Lançamentos 2024</h1>
 
-    <!-- Container onde os jogos serão inseridos pelo JavaScript -->
-    <div id="calendario"></div>
+    <h1>📅 Calendário de Lançamentos 2024</h1>
 
-    <!-- Nosso script que fará a mágica -->
-<link rel="stylesheet" href="script jogos.js">
+    <!-- Área de Filtros -->
+    <div class="filtros">
+        <button data-filter="all" class="active">Todos</button>
+        <button data-filter="PC">PC</button>
+        <button data-filter="PlayStation">PS5</button>
+        <button data-filter="Xbox">Xbox</button>
+        <button data-filter="Nintendo">Switch</button>
+    </div>
+
+    <!-- Controles de Mês -->
+    <div class="controles-mes">
+        <button id="btn-prev">◀ Mês Anterior</button>
+        <span id="mes-atual">Carregando...</span>
+        <button id="btn-next">Próximo Mês ▶</button>
+    </div>
+
+    <!-- Estado de Carregamento -->
+    <div id="loading" class="loading">
+        <p>🕹️ Buscando os próximos lançamentos...</p>
+    </div>
+
+    <!-- Container onde a lista de jogos será inserida -->
+    <div class="calendario" id="container-calendario">
+        <!-- Os jogos serão inseridos aqui pelo JavaScript -->
+    </div>
+
+    <!-- Mensagem de Erro -->
+    <div id="erro" class="erro" style="display: none;">
+        <p>❌ Opa! Não foi possível carregar o calendário de lançamentos no momento.</p>
+    </div>
+
+    <script src="jogos.js"></script>
 </body>
 </html>
