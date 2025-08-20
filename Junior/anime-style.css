@@ -1,142 +1,243 @@
-:root {
-    --primary: #ff3e81; /* Rosa-choque */
-    --secondary: #2e51a2; /* Azul MyAnimeList */
-    --dark: #1a1a2e;
-    --light: #fef6e4;
-    --orange: #ff7f00;
+/* Reset Básico e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Estilos Gerais */
 body {
-    background-color: var(--dark);
-    color: var(--light);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: #f2f2f2;
+    line-height: 1.6;
 }
 
-/* Grid Layout */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin: 1rem 0;
-}
-
-/* Cards */
-.card {
-    background: #2a2a40;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: white;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 62, 129, 0.5);
-}
-
-.card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-
-.card-info {
-    padding: 1rem;
-}
-
-/* Seções Temáticas */
-.manga-section h2 {
-    color: var(--secondary);
-    border-left: 4px solid var(--secondary);
-    padding-left: 1rem;
-}
-
-.manhwa-section h2 {
-    color: var(--orange);
-    border-left: 4px solid var(--orange);
-    padding-left: 1rem;
-}
-
-/* Carrossel */
-.carrossel-container {
-    position: relative;
+.container {
+    width: 90%;
     max-width: 1200px;
-    margin: 2rem auto;
-    overflow: hidden;
+    margin: 0 auto;
 }
 
-.carrossel {
+/* HEADER */
+.header {
+    background-color: #000;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #e53935; /* Cor de destaque */
+}
+
+.header .container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.carrossel-item {
-    min-width: 100%;
+.logo {
+    font-family: 'Oxanium', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #e53935; /* Cor de destaque */
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+.search-form button {
+    padding: 0.5rem;
+    border: none;
+    background: #e53935;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* DESTAQUE PRINCIPAL */
+.destaque-card {
     position: relative;
+    margin: 2rem 0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-.carrossel-item img {
+.destaque-card img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    display: block;
+    filter: brightness(0.7); /* Escurece a img para o texto ficar legível */
 }
-
-.carrossel-info {
+.destaque-content {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-    padding: 1rem;
+    padding: 2rem;
+    max-width: 60%;
+}
+.categoria {
+    background-color: #e53935;
     color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.destaque-content h2 {
+    font-family: 'Oxanium', cursive;
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    color: #fff;
+}
+.btn-leia-mais {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #e53935;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.btn-leia-mais:hover {
+    background-color: #b71c1c;
 }
 
-.carrossel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(46, 81, 162, 0.7);
+/* LAYOUT DA LISTAGEM DE NOTÍCIAS */
+.layout-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+/* CARDS DE ARTIGOS */
+.grid-artigos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.card-artigo {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.card-artigo:hover {
+    transform: translateY(-5px);
+}
+.card-artigo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem preencha o espaço */
+}
+.card-content {
+    padding: 1rem;
+}
+.categoria-tag {
+    font-size: 0.7rem;
+    color: #e53935;
+    font-weight: bold;
+}
+.card-content h3 {
+    margin: 0.5rem 0;
+    font-family: 'Oxanium', cursive;
+}
+
+/* SIDEBAR */
+.sidebar .widget {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+.sidebar .widget h3 {
+    color: #e53935;
+    margin-bottom: 1rem;
+    font-family: 'Oxanium', cursive;
+}
+.sidebar ol {
+    padding-left: 1.2rem;
+}
+.sidebar li {
+    margin-bottom: 0.5rem;
+}
+.sidebar a {
+    color: #ccc;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    color: #e53935;
+}
+.sidebar input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 4px;
+}
+.sidebar button {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #e53935;
     color: white;
     border: none;
-    padding: 1rem;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    z-index: 10;
 }
 
-.carrossel-btn.prev {
-    left: 1rem;
+/* FOOTER */
+.footer {
+    background-color: #000;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
 }
 
-.carrossel-btn.next {
-    right: 1rem;
-}
-
-.carrossel-btn:hover {
-    background: var(--primary);
-}
-
-/* Responsividade */
+/* RESPONSIVIDADE - Crucial! */
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
     }
-    
-    .carrossel-item img {
-        height: 300px;
+    .nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-}
-
-@media (max-width: 480px) {
-    .grid {
-        grid-template-columns: 1fr;
+    .destaque-content {
+        max-width: 100%;
+        position: relative;
+        padding: 1rem;
+        background: linear-gradient(transparent, #000);
+    }
+    .destaque-content h2 {
+        font-size: 1.8rem;
+    }
+    .layout-grid {
+        grid-template-columns: 1fr; /* Sidebar vai para baixo no mobile */
     }
 }
