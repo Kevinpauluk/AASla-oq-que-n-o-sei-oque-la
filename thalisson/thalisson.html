@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeekSound - Músicas para Ouvir e Jogar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fog-effect"></div> <!-- Efeito de névoa -->
+
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#playlists">Playlists</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="https://discord.gg/" target="_blank">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio">
+        <h1 class="title">GeekSound</h1>
+        <p class="subtitle">Mergulhe em trilhas épicas, lo-fi relaxante e músicas dark para jogar, ler ou apenas curtir.</p>
+    </main>
+
+    <section id="sobre">
+        <h2>🎵 Sobre o GeekSound</h2>
+        <p>Um espaço criado para fãs de games, animes e cultura nerd que buscam músicas para imersão em mundos fantásticos.</p>
+    </section>
+
+    <section id="playlists">
+        <h2>🎧 Playlists Temáticas</h2>
+        <div class="player-container">
+            <audio id="audio-player" controls></audio>
+            <div class="controls">
+                <button id="btn-prev">⏮</button>
+                <button id="btn-play">▶</button>
+                <button id="btn-next">⏭</button>
+            </div>
+        </div>
+
+        <div class="playlist">
+            <div class="track" data-src="music/dark-synth.mp3" data-name="Dark Synth - Mistério">Dark Synth - Mistério</div>
+            <div class="track" data-src="music/lofi-anime.mp3" data-name="Lo-Fi Anime - Relax">Lo-Fi Anime - Relax</div>
+            <div class="track" data-src="music/cyberpunk.mp3" data-name="Cyberpunk 2077 Vibes">Cyberpunk 2077 Vibes</div>
+            <div class="track" data-src="music/rpg-fantasy.mp3" data-name="RPG Fantasy Theme">RPG Fantasy Theme</div>
+            <div class="track" data-src="music/berserk-forces.mp3" data-name="Berserk - Forces">Berserk - Forces</div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>📩 Contato</h2>
+        <p>Mande sugestões de músicas ou feedback!</p>
+        <form>
+            <input type="text" placeholder="Seu nome">
+            <input type="email" placeholder="Seu e-mail">
+            <textarea placeholder="Sua mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>GeekSound &copy; 2024 - Feito para geeks de plantão.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
