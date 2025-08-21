@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="fog-effect"></div> <!-- Efeito de névoa -->
+    <div class="fog-effect"></div>
 
     <header>
         <nav class="menu">
@@ -33,6 +33,8 @@
 
     <section id="playlists">
         <h2>🎧 Playlists Temáticas</h2>
+        
+        <!-- Player Local -->
         <div class="player-container">
             <audio id="audio-player" controls></audio>
             <div class="controls">
@@ -42,12 +44,28 @@
             </div>
         </div>
 
+        <!-- Playlist Local -->
         <div class="playlist">
             <div class="track" data-src="music/dark-synth.mp3" data-name="Dark Synth - Mistério">Dark Synth - Mistério</div>
             <div class="track" data-src="music/lofi-anime.mp3" data-name="Lo-Fi Anime - Relax">Lo-Fi Anime - Relax</div>
             <div class="track" data-src="music/cyberpunk.mp3" data-name="Cyberpunk 2077 Vibes">Cyberpunk 2077 Vibes</div>
             <div class="track" data-src="music/rpg-fantasy.mp3" data-name="RPG Fantasy Theme">RPG Fantasy Theme</div>
             <div class="track" data-src="music/berserk-forces.mp3" data-name="Berserk - Forces">Berserk - Forces</div>
+        </div>
+
+        <!-- Plataformas de Streaming -->
+        <div class="streaming-section">
+            <h3>🎵 Ouça nas plataformas</h3>
+            <div class="streaming-platforms">
+                <a href="https://open.spotify.com/" target="_blank" class="platform-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" alt="Spotify">
+                    <span>Spotify</span>
+                </a>
+                <a href="https://music.apple.com/" target="_blank" class="platform-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Apple_Music_icon.svg/2048px-Apple_Music_icon.svg.png" alt="Apple Music">
+                    <span>Apple Music</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -63,7 +81,7 @@
     </section>
 
     <footer>
-        <p>GeekSound &copy; 2025 - Feito para geeks de plantão.</p>
+        <p>GeekSound &copy; 2024 - Feito para geeks de plantão.</p>
     </footer>
 
     <script src="script.js"></script>
