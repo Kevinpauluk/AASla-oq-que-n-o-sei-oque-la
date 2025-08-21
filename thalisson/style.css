@@ -17,7 +17,32 @@ body {
         radial-gradient(circle at 80% 70%, rgba(255, 0, 200, 0.1) 0%, transparent 40%);
 }
 
-/* Efeito de névoa futurista */
+/* ========== CONTROLE DE IMAGENS ========== */
+/* Todas as imagens ficam responsivas */
+img {
+    max-width: 100%;    /* Não estica mais que o container */
+    height: auto;       /* Mantém a proporção */
+    display: block;     /* Remove espaço embaixo */
+    border-radius: 8px; /* Bordinha suave */
+    border: 2px solid #00ffff; /* Bordas neon */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+/* Imagens dentro dos links de plataformas */
+.platform-link img {
+    width: 60px;        /* Tamanho fixo para ícones */
+    height: 60px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px #00ffff);
+    transition: 0.3s;
+}
+
+.platform-link:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #ff00ff);
+}
+
+/* ========== EFEITO DE NÉVOA ========== */
 .fog-effect {
     position: fixed;
     top: 0;
@@ -29,7 +54,7 @@ body {
     pointer-events: none;
 }
 
-/* Menu estilo cyberpunk */
+/* ========== MENU CYBERPUNK ========== */
 .menu {
     background: rgba(0, 0, 0, 0.8);
     padding: 15px;
@@ -67,7 +92,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Conteúdo principal */
+/* ========== CONTEÚDO PRINCIPAL ========== */
 main {
     text-align: center;
     padding: 120px 20px;
@@ -107,7 +132,7 @@ main::before {
     text-shadow: 0 0 10px #00ffff;
 }
 
-/* Seções */
+/* ========== SEÇÕES ========== */
 section {
     padding: 80px 20px;
     border-top: 2px solid #00ffff;
@@ -124,7 +149,7 @@ section h2 {
     font-family: 'Arial Black', sans-serif;
 }
 
-/* Player de música */
+/* ========== PLAYER DE MÚSICA ========== */
 .player-container {
     max-width: 500px;
     margin: 30px auto;
@@ -166,7 +191,7 @@ section h2 {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-/* Playlist */
+/* ========== PLAYLIST ========== */
 .playlist {
     max-width: 600px;
     margin: 40px auto;
@@ -190,7 +215,7 @@ section h2 {
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
 }
 
-/* Seção de Streaming */
+/* ========== STREAMING ========== */
 .streaming-section {
     margin-top: 50px;
     text-align: center;
@@ -233,13 +258,6 @@ section h2 {
     border-color: #ff00ff;
 }
 
-.platform-link img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 0 10px #00ffff);
-}
-
 .platform-link span {
     font-weight: bold;
     color: #ff00ff;
@@ -247,7 +265,7 @@ section h2 {
     font-size: 1.2em;
 }
 
-/* Formulário */
+/* ========== FORMULÁRIO ========== */
 form {
     max-width: 400px;
     margin: 30px auto;
@@ -288,7 +306,7 @@ button[type="submit"]:hover {
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
 footer {
     text-align: center;
     padding: 30px;
@@ -298,7 +316,7 @@ footer {
     text-shadow: 0 0 10px #00ffff;
 }
 
-/* Responsividade */
+/* ========== RESPONSIVIDADE ========== */
 @media (max-width: 768px) {
     .menu ul {
         flex-direction: column;
@@ -311,5 +329,16 @@ footer {
     
     .streaming-platforms {
         flex-direction: column;
+        gap: 20px;
+    }
+    
+    .platform-link {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    img {
+        max-width: 90%; /* Reduz um pouco em mobile */
+        margin: 0 auto;
     }
 }
