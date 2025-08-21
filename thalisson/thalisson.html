@@ -1,89 +1,296 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeekSound - Músicas para Ouvir e Jogar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>GeekSound | Trilhas Épicas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --neon-cyan: #0ff;
+            --neon-pink: #f0f;
+            --neon-green: #0f0;
+            --dark-bg: #0a0a16;
+            --darker-bg: #050510;
+            --card-bg: rgba(30, 30, 46, 0.95);
+        }
+
+        body {
+            background-color: #0d0d17;
+            color: #fff;
+            overflow-x: hidden;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #a0a0c0;
+            margin-bottom: 30px;
+        }
+
+        .hero {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            color: var(--neon-cyan);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #444, transparent);
+            margin: 25px 0;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .category {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-3px);
+        }
+
+        .category h3 {
+            font-size: 1.5rem;
+            color: var(--neon-pink);
+            margin-bottom: 15px;
+        }
+
+        .category p {
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .platforms {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .platforms h2 {
+            font-size: 1.8rem;
+            color: var(--neon-green);
+            margin-bottom: 25px;
+        }
+
+        .platform-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .platform-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #1a1a2e;
+            color: var(--neon-cyan);
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .platform-icon:hover {
+            background: var(--neon-cyan);
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Efeitos Cyberpunk sutis */
+        .cyber-border {
+            position: relative;
+        }
+
+        .cyber-border::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+            opacity: 0.7;
+        }
+
+        /* Estilo para o título em italiano */
+        .italian-title {
+            font-style: italic;
+            color: var(--neon-pink);
+            text-shadow: 0 0 5px rgba(240, 0, 240, 0.5);
+            display: inline-block;
+            margin-left: 10px;
+            transform: rotate(-2deg);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            .hero {
+                padding: 20px;
+            }
+            
+            .category {
+                padding: 20px;
+            }
+            
+            .italian-title {
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+
+        /* Animações sutis */
+        @keyframes subtleGlow {
+            0% { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+            50% { box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2); }
+            100% { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+        }
+
+        .category {
+            animation: subtleGlow 5s infinite;
+        }
+    </style>
 </head>
 <body>
-    <div class="fog-effect"></div>
+    <div class="container">
+        <header>
+            <h1 class="logo">GEEKSOUND <span class="italian-title">"Suono Geek"</span></h1>
+            <p class="tagline">Trilhas épicas para imersão em mundos fantásticos</p>
+        </header>
 
-    <header>
-        <nav class="menu">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#playlists">Playlists</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="https://discord.gg/" target="_blank">Discord</a></li>
-            </ul>
-        </nav>
-    </header>
+        <section class="hero">
+            <h1 class="cyber-border">Tequesum que's mu exis!</h1>
+            <p>Mergulhe em trilhas épicas do fri relaxante e músicas dark para jogar, ler ou apenas curtir.</p>
+            
+            <div class="divider"></div>
+            
+            <h2>Sobre o GeekSound</h2>
+            <p>Um espaço criado para fãs de games, animes e cultura nerd que buscam músicas para imersão em mundos fantásticos.</p>
+        </section>
 
-    <main id="inicio">
-        <h1 class="title">GeekSound</h1>
-        <p class="subtitle">Mergulhe em trilhas épicas, lo-fi relaxante e músicas dark para jogar, ler ou apenas curtir.</p>
-    </main>
-
-    <section id="sobre">
-        <h2>🎵 Sobre o GeekSound</h2>
-        <p>Um espaço criado para fãs de games, animes e cultura nerd que buscam músicas para imersão em mundos fantásticos.</p>
-    </section>
-
-    <section id="playlists">
-        <h2>🎧 Playlists Temáticas</h2>
-        
-        <!-- Player Local -->
-        <div class="player-container">
-            <audio id="audio-player" controls></audio>
-            <div class="controls">
-                <button id="btn-prev">⏮</button>
-                <button id="btn-play">▶</button>
-                <button id="btn-next">⏭</button>
+        <div class="categories">
+            <div class="category">
+                <h3>Dark Synth - Mistério</h3>
+                <p>Batidas eletrônicas com atmosfera sombria e envolvente.</p>
+            </div>
+            
+            <div class="category">
+                <h3>Lo-Fi Anime - Relax</h3>
+                <p>Músicas calmas inspiradas nas trilhas sonoras de anime.</p>
+            </div>
+            
+            <div class="category">
+                <h3>Cyberpunk 2077 Vibes</h3>
+                <p>Synthwave e batidas que remetem à Night City.</p>
+            </div>
+            
+            <div class="category">
+                <h3>RPG Fantasy Theme</h3>
+                <p>Trilhas épicas para suas aventuras em mundos fantásticos.</p>
             </div>
         </div>
 
-        <!-- Playlist Local -->
-        <div class="playlist">
-            <div class="track" data-src="music/dark-synth.mp3" data-name="Dark Synth - Mistério">Dark Synth - Mistério</div>
-            <div class="track" data-src="music/lofi-anime.mp3" data-name="Lo-Fi Anime - Relax">Lo-Fi Anime - Relax</div>
-            <div class="track" data-src="music/cyberpunk.mp3" data-name="Cyberpunk 2077 Vibes">Cyberpunk 2077 Vibes</div>
-            <div class="track" data-src="music/rpg-fantasy.mp3" data-name="RPG Fantasy Theme">RPG Fantasy Theme</div>
-            <div class="track" data-src="music/berserk-forces.mp3" data-name="Berserk - Forces">Berserk - Forces</div>
-        </div>
-
-        <!-- Plataformas de Streaming -->
-        <div class="streaming-section">
-            <h3>🎵 Ouça nas plataformas</h3>
-            <div class="streaming-platforms">
-                <a href="https://open.spotify.com/" target="_blank" class="platform-link">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png" alt="Spotify">
-                    <span>Spotify</span>
-                </a>
-                <a href="https://music.apple.com/" target="_blank" class="platform-link">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Apple_Music_icon.svg/2048px-Apple_Music_icon.svg.png" alt="Apple Music">
-                    <span>Apple Music</span>
-                </a>
+        <div class="platforms">
+            <h2>Ouvir nas plataformas</h2>
+            <div class="platform-icons">
+                <div class="platform-icon"><i class="fab fa-spotify"></i></div>
+                <div class="platform-icon"><i class="fab fa-youtube"></i></div>
+                <div class="platform-icon"><i class="fab fa-soundcloud"></i></div>
+                <div class="platform-icon"><i class="fab fa-apple"></i></div>
             </div>
         </div>
-    </section>
-
-    <section id="contato">
-        <h2>📩 Contato</h2>
-        <p>Mande sugestões de músicas ou feedback!</p>
-        <form>
-            <input type="text" placeholder="Seu nome">
-            <input type="email" placeholder="Seu e-mail">
-            <textarea placeholder="Sua mensagem"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+    </div>
 
     <footer>
-        <p>GeekSound &copy; 2025 - Feito para geeks de plantão.</p>
+        <p>GeekSound &copy; 2023 - Trilhas Épicas para Gamers e Geeks</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Efeito de digitação no título
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('.hero h1');
+            const originalText = title.innerHTML;
+            title.innerHTML = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < originalText.length) {
+                    title.innerHTML += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            
+            setTimeout(typeWriter, 500);
+        });
+    </script>
 </body>
 </html>
